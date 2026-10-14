@@ -24,7 +24,7 @@ const body = Nunito({
 const __jsonld = {"@context":"https://schema.org","@type":"WebSite","name":"Undangan Khitanan Digital — Kapten Fauzan","description":"Contoh undangan khitanan digital bergaya komik: kartu jagoan, peta petualangan, hitung mundur, RSVP, dan musik latar.","inLanguage":"id"};
 
 export const metadata = {
-  metadataBase: new URL("https://undangan-khitanan-theta.vercel.app"),
+  metadataBase: new URL("https://undangan-khitanan.pintuweb.id"),
   title: "Undangan Khitanan Digital — Kapten Fauzan",
   description: "Undangan khitanan digital bertema komik pahlawan super yang seru. Rayakan keberanian sang jagoan kecil bersama keluarga & sahabat.",
   applicationName: "Undangan Digital",
@@ -32,11 +32,11 @@ export const metadata = {
   authors: [{ name: "Undangan Digital" }],
   creator: "Undangan Digital",
   publisher: "Undangan Digital",
-  alternates: { canonical: "https://undangan-khitanan-theta.vercel.app" },
+  alternates: { canonical: "https://undangan-khitanan.pintuweb.id" },
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://undangan-khitanan-theta.vercel.app",
+    url: "https://undangan-khitanan.pintuweb.id",
     siteName: "Undangan Digital",
     title: "Undangan Khitanan Digital — Kapten Fauzan",
     description: "Undangan khitanan digital bertema komik pahlawan super yang seru. Rayakan keberanian sang jagoan kecil bersama keluarga & sahabat.",

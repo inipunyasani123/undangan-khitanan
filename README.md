@@ -2,7 +2,7 @@
 
 Komik petualangan pop-art: sampul “Mulai!”, panel jagoan, kartu karakter dengan bar stat (sekadar seru-seruan), peta checkpoint dengan hitung mundur misi, dan dinding stiker ucapan.
 
-**Demo live:** https://undangan-khitanan-theta.vercel.app
+**Demo live:** https://undangan-khitanan.pintuweb.id
 
 ![Tangkapan layar](public/og.jpg)
 
