@@ -9,7 +9,7 @@ export default function HeroPanel() {
   const { hero, opening } = config;
 
   return (
-    <section className="relative z-10 flex min-h-screen flex-col items-center justify-center overflow-hidden bg-rose-deep px-6 py-24 text-center">
+    <section className="relative z-10 flex min-h-svh flex-col items-center justify-center overflow-hidden bg-rose-deep px-6 py-24 text-center">
       <div className="sunburst absolute inset-0 opacity-30" aria-hidden="true" />
 
       <motion.div
@@ -21,17 +21,14 @@ export default function HeroPanel() {
         {/* Balon ucapan */}
         <div className="comic-border comic-shadow-sm relative mx-auto mb-6 max-w-xs bg-cream px-5 py-3">
           <p className="font-script text-xl uppercase text-rose">&ldquo;{opening.battlecry}&rdquo;</p>
-          <span className="absolute -bottom-3 left-10 h-4 w-4 rotate-45 border-b-4 border-r-4 border-ink bg-cream" />
+          <span className="absolute -bottom-3 left-10 h-4 w-4 rotate-45 border-b-4 border-r-4 border-ink bg-cream" aria-hidden="true" />
         </div>
 
         <div className="comic-border comic-shadow relative mx-auto h-72 w-60 overflow-hidden bg-blush">
-          <Image src={hero.photo} alt={hero.fullName} fill priority sizes="240px" className="object-cover" />
+          <Image src={hero.photo} alt={hero.fullName} fill sizes="240px" className="object-cover" />
         </div>
 
-        <h1
-          className="mt-6 break-words font-display text-4xl text-gold sm:text-5xl md:text-7xl"
-          style={{ WebkitTextStroke: '2px #15173a' }}
-        >
+        <h1 className="garis-komik mt-6 break-words font-display text-4xl text-gold sm:text-5xl md:text-7xl">
           {hero.alias}
         </h1>
         <p className="mx-auto mt-3 max-w-md font-bold text-cream">{opening.tagline}</p>

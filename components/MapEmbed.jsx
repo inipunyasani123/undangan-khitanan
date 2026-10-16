@@ -10,11 +10,14 @@ export default function MapEmbed() {
         <h2 className="font-display text-4xl text-rose md:text-5xl" style={{ WebkitTextStroke: '1.5px #15173a' }}>
           Lokasi Markas
         </h2>
-        <div className="comic-border comic-shadow mt-8 overflow-hidden bg-cream">
+        <div className="comic-border comic-shadow relative mt-8 overflow-hidden bg-blush">
+          <p className="absolute inset-0 flex items-center justify-center gap-2 font-display text-lg text-rose-deep" aria-hidden="true">
+            <MapPin size={18} /> Memuat peta…
+          </p>
           <iframe
             src={location.mapEmbed}
             title="Peta lokasi acara"
-            className="h-72 w-full border-0"
+            className="relative h-72 w-full border-0"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
             allowFullScreen

@@ -17,15 +17,15 @@ export default function HeroStats() {
         transition={{ duration: 0.6 }}
         className="comic-border comic-shadow mx-auto max-w-md bg-rose-deep p-5 text-cream"
       >
-        <div className="comic-border bg-gold px-3 py-1 text-center font-display text-2xl text-ink">
+        <h2 className="comic-border bg-gold px-3 py-1 text-center font-display text-2xl text-ink">
           Kartu Sang Jagoan
-        </div>
+        </h2>
 
         <div className="comic-border relative mt-4 h-56 w-full overflow-hidden bg-cream">
           <Image src={hero.photo} alt={hero.fullName} fill sizes="400px" className="object-cover" />
         </div>
 
-        <h3 className="mt-4 text-center font-display text-3xl text-gold">{hero.fullName}</h3>
+        <h3 className="mt-4 text-balance text-center font-display text-3xl text-gold">{hero.fullName}</h3>
         <p className="text-center text-sm font-bold text-cream/80">{hero.age} Tahun • Putra dari {hero.parents}</p>
 
         {/* Bar stat */}
@@ -38,7 +38,7 @@ export default function HeroStats() {
               <div className="comic-border mt-1 h-4 overflow-hidden bg-cream" role="meter" aria-label={s.label} aria-valuenow={s.value} aria-valuemin={0} aria-valuemax={100}>
                 {/* scaleX pada elemen selebar penuh: elemen berlebar 0 tidak terdeteksi IntersectionObserver */}
                 <motion.div
-                  className="h-full w-full origin-left bg-rose"
+                  className="h-full w-full origin-left bg-gold"
                   initial={{ scaleX: 0 }}
                   whileInView={{ scaleX: s.value / 100 }}
                   viewport={{ once: true }}

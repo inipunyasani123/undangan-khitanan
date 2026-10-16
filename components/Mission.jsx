@@ -29,7 +29,7 @@ export default function Mission() {
             <Target size={16} /> Misi Hari Ini
           </span>
 
-          <h3 className="mt-4 font-display text-3xl text-ink">{mission.name}</h3>
+          <h2 className="mt-4 font-display text-3xl text-ink">{mission.name}</h2>
 
           <ul className="mt-5 space-y-3">
             {rows.map(({ icon: Icon, text }, i) => (
@@ -43,7 +43,7 @@ export default function Mission() {
             href={calUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="comic-border comic-shadow-sm mt-6 inline-flex items-center gap-2 bg-rose-deep px-5 py-2.5 font-display text-lg text-cream transition hover:bg-ink"
+            className="comic-border comic-shadow-sm mt-6 inline-flex min-h-12 items-center gap-2 bg-rose-deep px-5 py-2.5 font-display text-lg text-cream transition hover:bg-ink"
           >
             <CalendarPlus size={16} /> Catat di Kalender
           </a>

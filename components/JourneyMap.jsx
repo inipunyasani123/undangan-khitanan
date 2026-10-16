@@ -17,7 +17,7 @@ export default function JourneyMap() {
   return (
     <section className="relative z-10 bg-rose px-6 py-20 text-cream">
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="font-display text-4xl text-gold md:text-5xl" style={{ WebkitTextStroke: '1.5px #15173a' }}>
+        <h2 className="font-display text-4xl text-gold md:text-5xl garis-komik">
           Peta Petualangan
         </h2>
 

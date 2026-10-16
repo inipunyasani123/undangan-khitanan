@@ -22,10 +22,7 @@ export default function Footer() {
       <div className="mx-auto max-w-lg">
         <p className="font-bold text-cream/90">{footer.closing}</p>
 
-        <h2
-          className="my-7 font-display text-6xl text-gold sm:text-7xl md:text-8xl"
-          style={{ WebkitTextStroke: '3px #15173a' }}
-        >
+        <h2 className="garis-komik my-7 font-display text-6xl text-gold sm:text-7xl md:text-8xl">
           TAMAT
         </h2>
 
@@ -45,7 +42,7 @@ export default function Footer() {
           </p>
         )}
         <p className="mt-2 text-xs font-bold text-cream/80">
-          <Link href="/kirim" className="underline underline-offset-4 hover:text-gold">Kirim undangan ke pasukan</Link>
+          <Link href="/kirim" className="inline-block py-2 underline underline-offset-4 hover:text-gold">Kirim undangan ke pasukan</Link>
         </p>
       </div>
     </footer>

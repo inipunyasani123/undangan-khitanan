@@ -8,11 +8,13 @@ const display = Bangers({
   variable: '--font-bangers',
   display: 'swap',
 });
+// Font skrip hanya dipakai di isi (bukan sampul): tidak di-preload agar halaman pertama lebih ringan.
 const script = Luckiest_Guy({
   subsets: ['latin'],
   weight: '400',
   variable: '--font-luckiest',
   display: 'swap',
+  preload: false,
 });
 const body = Nunito({
   subsets: ['latin'],
@@ -21,7 +23,7 @@ const body = Nunito({
   display: 'swap',
 });
 
-const __jsonld = {"@context":"https://schema.org","@type":"WebSite","name":"Undangan Khitanan Digital — Kapten Fauzan","description":"Contoh undangan khitanan digital bergaya komik: kartu jagoan, peta petualangan, hitung mundur, RSVP, dan musik latar.","inLanguage":"id"};
+const __jsonld = {"@context":"https://schema.org","@type":"WebSite","name":"Undangan Khitanan Digital — Kapten Fauzan","url":"https://undangan-khitanan.pintuweb.id","description":"Contoh undangan khitanan digital bergaya komik: kartu jagoan, peta petualangan, hitung mundur, RSVP, dan musik latar.","inLanguage":"id"};
 
 export const metadata = {
   metadataBase: new URL("https://undangan-khitanan.pintuweb.id"),

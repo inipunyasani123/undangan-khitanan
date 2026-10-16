@@ -17,11 +17,12 @@ export default function WishesForm() {
   const submit = (e) => {
     e.preventDefault();
     if (!form.name.trim() || !form.message.trim()) return;
-    setWishes((p) => [{ id: Date.now(), ...form }, ...p]);
+    setWishes((p) => [{ id: Date.now(), name: form.name.trim(), message: form.message.trim() }, ...p]);
     setForm({ name: '', message: '' });
   };
 
   const field = 'comic-border w-full bg-cream px-4 py-3 text-sm font-semibold outline-none focus:bg-blush/40';
+  const lab = 'mb-1 block font-display text-lg leading-none text-rose-deep';
 
   return (
     <section className="relative z-10 bg-cream px-6 py-20">
@@ -31,15 +32,21 @@ export default function WishesForm() {
         </h2>
 
         <form onSubmit={submit} className="comic-border comic-shadow mx-auto mt-8 max-w-md space-y-3 bg-blush p-5 text-left">
-          <input aria-label="Nama kamu" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} placeholder="Nama Kamu" className={field} required />
-          <textarea aria-label="Pesan semangat dan doa" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} placeholder="Tulis semangat & doa..." rows={3} className={`${field} resize-none`} required />
+          <div>
+            <label htmlFor="semangat-nama" className={lab}>Nama</label>
+            <input id="semangat-nama" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} placeholder="Nama kamu" autoComplete="name" maxLength={60} className={field} required />
+          </div>
+          <div>
+            <label htmlFor="semangat-pesan" className={lab}>Semangat &amp; doa</label>
+            <textarea id="semangat-pesan" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} placeholder="Tulis semangat & doa…" rows={3} maxLength={500} className={`${field} resize-none`} required />
+          </div>
           <button type="submit" className="comic-border comic-shadow-sm inline-flex items-center gap-2 bg-rose-deep px-5 py-2.5 font-display text-lg text-cream transition hover:bg-ink">
             <Send size={15} aria-hidden="true" /> Tempel!
           </button>
         </form>
 
         {/* Dinding stiker */}
-        <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-3">
+        <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-3" aria-live="polite">
           {wishes.map((w, i) => (
             <div
               key={w.id}
