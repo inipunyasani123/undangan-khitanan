@@ -25,7 +25,7 @@ export default function HeroPanel() {
         </div>
 
         <div className="comic-border comic-shadow relative mx-auto h-72 w-60 overflow-hidden bg-blush">
-          <Image src={hero.photo} alt={hero.fullName} fill sizes="240px" className="object-cover" />
+          <Image src={hero.battlePhoto || hero.photo} alt={hero.battlePhotoAlt || hero.photoAlt || hero.fullName} fill sizes="240px" className="object-cover" />
         </div>
 
         <h1 className="garis-komik mt-6 break-words font-display text-4xl text-gold sm:text-5xl md:text-7xl">

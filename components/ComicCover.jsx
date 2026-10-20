@@ -49,7 +49,7 @@ export default function ComicCover({ keluar, onOpen, onSelesai, musik, onMusik }
 
         {/* Kartu jagoan */}
         <div className="masuk comic-shadow-lg relative mb-7 aspect-[3/4] w-[62%] max-w-[230px] -rotate-2 overflow-hidden rounded-lg border-4 border-ink bg-blush" style={{ '--tunda': '0.1s' }}>
-          <Image src={hero.photo} alt={hero.fullName} fill priority sizes="230px" className="object-cover" />
+          <Image src={hero.photo} alt={hero.photoAlt || hero.fullName} fill priority fetchPriority="high" sizes="230px" className="object-cover" />
           <span className="absolute bottom-2 left-2 comic-border bg-gold px-2 py-0.5 font-display text-lg text-ink">{hero.alias}</span>
         </div>
 

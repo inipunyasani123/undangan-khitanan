@@ -22,9 +22,9 @@ export default function ComicGallery() {
         </h2>
 
         <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-3">
-          {gallery.map((src, i) => (
+          {gallery.map((foto, i) => (
             <motion.button
-              key={src}
+              key={foto.src}
               style={{ rotate: tilts[i % tilts.length] }}
               whileHover={{ rotate: '0deg', scale: 1.03 }}
               type="button"
@@ -33,7 +33,7 @@ export default function ComicGallery() {
               aria-label={`Perbesar aksi ${i + 1}`}
             >
               <span className="relative block h-40 w-full md:h-52">
-                <Image src={src} alt={`Aksi ${i + 1}`} fill sizes="(max-width:768px) 45vw, 240px" className="object-cover" />
+                <Image src={foto.src} alt={foto.alt} fill sizes="(max-width:768px) 45vw, 240px" className="object-cover" />
               </span>
             </motion.button>
           ))}
@@ -55,7 +55,7 @@ export default function ComicGallery() {
               initial={{ scale: 0.9 }} animate={{ scale: 1 }} exit={{ scale: 0.9 }}
               onClick={(e) => e.stopPropagation()}
             >
-              <Image src={gallery[active]} alt={`Aksi ${active + 1}`} fill sizes="(max-width: 640px) 100vw, 576px" className="object-contain" />
+              <Image src={gallery[active].src} alt={gallery[active].alt} fill sizes="(max-width: 640px) 100vw, 576px" className="object-contain" />
             </motion.div>
           </motion.div>
         )}

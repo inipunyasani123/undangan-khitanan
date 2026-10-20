@@ -22,7 +22,7 @@ export default function HeroStats() {
         </h2>
 
         <div className="comic-border relative mt-4 h-56 w-full overflow-hidden bg-cream">
-          <Image src={hero.photo} alt={hero.fullName} fill sizes="400px" className="object-cover" />
+          <Image src={hero.photo} alt={hero.photoAlt || hero.fullName} fill sizes="400px" className="object-cover object-[50%_24%]" />
         </div>
 
         <h3 className="mt-4 text-balance text-center font-display text-3xl text-gold">{hero.fullName}</h3>
